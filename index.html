@@ -1,15 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+-	Clone-3 "Whatsapp"
+-	Developed by Mayank
+-	CopyRight by Whatsapp
+-	HTML : ./login.html
+-->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MayankDevil</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> MayankDevil </title>
+	<link rel="shortcut icon" href="data/bg.png" type="image/x-icon">
+	<!--
+		---------
+		| style |
+		---------
+	-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
 </head>
-<body style="padding:0;margin:0;">
 
-    <iframe src="https://gauravmishra2401.github.io/whatsappweb/" frameborder="0" style="width:100%; height:100vh;border:none; overflow-y:hidden;"></iframe>
+<body class="">
 
-    
+	<!--
+		------------------------------------------------
+		| primary container | 
+		------------------------------------------------
+	-->
+	<main class="" id="primary_container">
+		<!--
+			-------------------------
+			[ second header section ]------------------------------------
+			-------------------------
+		-->
+		<header class="" id="primary_header">
+			<div class="flex justify-between">
+
+				<!-- ( brand name ) -->
+				<div class="" id="brand_name"> Whatsapp </div>
+				
+				<!-- ( tools ) -->
+				<div class="" id="tools">
+					
+					<a href="#" class="tool">
+						<span class="bi bi-camera-fill"></span>
+					</a>
+					<a href="#" class="tool">
+						<span class="bi bi-search"></span>
+					</a>
+					<a href="#" class="tool">
+						<span class="bi bi-three-dots-vertical"></span>
+					</a>
+
+				</div>
+
+			</div>
+			
+		</header>
+
+		<div>
+		
+			<!-- navbar -->
+			<nav id="navbar">
+				
+				<span class="bi bi-people-fill" id="group_icon"></span>
+				
+				<div id="nav">
+					<a href="#" class="active"> CHATS </a>
+					<a href="#status"> STATUS </a>
+					<a href="#call"> CALLS </a>
+				</div>
+				
+			</nav>
+			<!--
+				----------------
+				[ chat section ]------------------------------------
+				----------------
+			-->
+			<section id="chats">
+				<!--
+					- include js/chatData.js
+					- use array of object
+					- 
+				-->
+				
+			</section>
+			<!--
+				==================
+				[ message button ]------------------------------------
+				==================
+			-->
+			<div id="msg_btn">
+				<span class="bi bi-chat-right-text-fill"></span>
+			</div>
+			
+			<!-- <span class="bi bi-collection"></span> -->
+		</div>
+		
+	</main>
+	<!--
+		----------
+		| script |
+		----------
+	-->
+	<script src="js/chatData.js"></script>
+	<script src="js/script.js"></script>
+
 </body>
+
 </html>
+<!-- the end -->

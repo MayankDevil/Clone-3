@@ -10,7 +10,7 @@
 
 - Status : ACTIVE
 
-- Responsive : False
+- Responsive : True
 
 - TecStack : { HTML | CSS | JavaScript }
 
@@ -34,10 +34,12 @@
 
 ### Home Page
 
-![HomPage](./data/whatsapp.png "HomePage")
+![HomPage](./data/whatsappHome.png "HomePage")
 
 ## NOTE
 
 _this repository is the clone of **Whatsapp**. I am just try to copy and develope to make better version as my imagination because i am developer_
 
+## Message
 
+_this is whatsapp mobile for mobile_

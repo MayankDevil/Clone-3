@@ -6,64 +6,99 @@
 */
 try
 {
+    // let primary_container = document.getElementById('primary_container')
+
+    // let secondary_container = document.getElementById('secondary_container')
     
+    let chats = document.getElementById('chats')
 
-    let search_fld = document.getElementById('search_fld')
-    
-    let data_list = document.getElementById('data_list')
+    let chatBox = document.getElementsByClassName('chatBox')
 
-    let all_link = document.getElementsByClassName('url')
-    
-    data_list.style.display = 'none';
+    var index = Math.floor(Math.random() * chatData.length)
 
-    var url = [
-        "https://github.com/login",
-        "https://web.telegram.org/",
-        "https://en.wikipedia.org/",
-        "https://twitter.com/",
-        "https://www.google.com/gmail/about/",
-        "https://in.linkedin.com/",
-        "https://mxlinux.org/",
-        "https://web.whatsapp.com/",
-        "https://www.youtube.com/",
-        "https://account.microsoft.com/",
-        "https://exporntoons.net/recent",
-    ].forEach( (element) => {
+    chat_Section()
 
-        data_list.insertAdjacentHTML("afterbegin",`<a href='${element}' class='url'> ${element} </a>`);
-
-    })
-    
-    search_fld.onkeydown = () => {
-
-        var serach_value = search_fld.value;
-
-        
-        for(i = 0; i < url.length; i++)
+    /*
+        ----------------------------------------------------------------------------------------
+        [ chat box layout ] get chat data argument and return layout
+        ----------------------------------------------------------------------------------------
+    */ 
+    function chat_Box_Layout(data)
+    {
+        if (data.person_dp == null)
         {
-            data = all_link[i].innerText
-            
-            if (search_data.upperCase().indexOf(data.upperCase()) > -1)
-            {
-                data_list.style.display = 'block';
-            }
-            else
-            {
-                data_list.style.display = 'none';
-            }
+            return (`
+                <div class="chatBox">
+
+                    <div class="chat_dp">
+                        <span class="bi bi-person-circle"></span>
+                    </div>
+                    
+                    <div class="chat_detail">
+                        <div>
+                            <div class="person_name"> ${data.person_name} </div>
+                            <time> ${data.chat[data.chat.length - 1].time} </time>
+                        </div>
+                        <div>
+                            <div class="short_message"> ${data.chat[0].data} </div>
+                            <div class="notice"> 1 </div>
+                        </div>
+                    </div>
+
+                </div>
+            `)
+        }
+        else
+        {
+            return (`
+                <div class="chatBox">
+
+                    <div class="chat_dp">
+                        <img src='${data.person_dp }' class='image_dp'>
+                    </div>
+                    
+                    <div class="chat_detail">
+                        <div>
+                            <div class="person_name"> ${data.person_name} </div>
+                            <time> ${data.chat[data.chat.length - 1].time} </time>
+                        </div>
+                        <div>
+                            <div class="short_message"> ${data.chat[0].data} </div>
+                        </div>
+                    </div>
+
+                </div>
+            `)
+        }
+    }
+    /*
+        -----------------------------------------------------------------------------------------
+        | chat section function | return numbers of chats that present in chatData
+        -----------------------------------------------------------------------------------------
+    */ 
+    function chat_Section()
+    {
+        chats.innerHTML = "" // clear chat section
+
+        /*
+            [ return as loop until to chat length ]----------------------------------------------
+        */ 
+        for (let i = 0; i < chatData.length; i++)
+        {
+            chats.insertAdjacentHTML("beforeend",`${ chat_Box_Layout(chatData[i]) }`)
+            // chats.insertAdjacentHTML("beforeend",`${ chat_Box_Layout(chatData[i]) }`)
         }
     }
 
-    search_fld.onunfocus = () => {
-
-        data_list.style.display = 'none';
-    }
-
-    function search_data()
+    for (let i = 0; i < chatBox.length; i++)
     {
-        url.forEach(data => ` <a href="${data}"> ${data} </a>` );
+        
+        chatBox[i].onclick = () => {
+
+            index = i
+            window.open('second.html','_parent','width=150,height=100'.false)
+        }    
     }
-    
 }
 catch(error)
 {

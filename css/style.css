@@ -4,6 +4,8 @@
 -	CopyRight by Whatsapp
 -	CSS : ./css/style.css
 */
+@import "./bootstrap.min.css";
+@import "./bootstrap-icons.min.css";
 @import "./form.css";
 
 /*
@@ -28,34 +30,51 @@
     --green:#51a08d;
     --lgreen:#dcf8c6;
     --black:#343a4D;
+    --gray:#6c757d;
+    --lgray:#ced4da;
     --light:#f8f9fa;
+    --white:#f4fbff;
     --face:#f1ead1;
     --fw:rgba(255,255,255,0.5);
 }
 ::-webkit-scrollbar
 {
-    width:1rem;
-    background: var(--light);
+    width:5px;
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb
 {
-    border-radius: 10px;
-    background: transparent;
+    border-radius: 5px;
+    background: var(--fw);
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background: var(--light);
 }
 body
 {
+    background: var(--lgray);
     scroll-behavior: smooth;
     overflow: hidden;
 }
-#main
+#primary_container
+{
+    height: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow-y: auto;
+}
+#secondary_container
 {
     width: 100%;
     min-height: 100vh;
 }
 /*
-    HEADER CSS -----
+    HEADER -----
 */
-header div
+#primary_header div,
+#second_header div
 {
     display: flex;
     align-items: center;
@@ -64,17 +83,92 @@ header div
     background:var(--dgreen);
 }
 /*
+    NAVBAR -----
+*/
+#navbar
+{
+    position: sticky;
+    top:0;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    height: 8vh;
+    background:var(--dgreen);
+}
+#group_icon
+{
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    color: var(--light);
+}
+#nav
+{
+    display: grid;
+    grid-gap:0;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 8vh;
+    padding: 0 1rem;
+    /* border: 1px solid red; */
+}
+#nav > a
+{
+    display:block;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    line-height: 5vh;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color:var(--lgray);
+    /* border: 1px solid blue; */
+}
+.active
+{
+    color:var(--light) !important;
+    border-bottom: 5px solid var(--light);
+}
+/*
+    BRANDNAME ------
+*/
+#brand_name
+{
+    padding: 1rem;
+    font-size: 1.5rem;
+    color:var(--light);
+}
+#tools .bi
+{   
+    padding: 10px;
+    font-size: 1.5rem;
+    color:var(--light);
+}
+#tools .bi:hover
+{
+    border-radius: 50%;
+    background: var(--fw);
+}
+#tools .bi-search
+{
+    font-size: 1.4rem;
+}
+/*
     PERSON -------
 */
-#person
-{}
-.person_dp
+#person_dp > .bi-person-circle
 {
     padding: 1rem;
     font-size: 2rem;
     color: var(--light);
 }
-.person_name
+#person_dp > .image_dp
+{
+    width:50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#person_name
 {
     font-weight: normal;
     font-size: 1.3rem;
@@ -89,7 +183,6 @@ header div
     grid-gap:1rem;
     padding: 0 1rem;
     height: 100%;
-    border: 1px solid red;
 }
 .feature .bi
 {   
@@ -103,19 +196,145 @@ header div
     background: var(--fw);
 }
 /*
-    MESSAGE SECTION ------
+    CHATS ---------
 */
-#message_section
+#chats
 {
+    display: block;
+    height: 84vh;
     width: 100%;
-    min-height: 84vh;
-    background:var(--face);
-    overflow-y: auto;
+    background: var(--light);
+}
+.chatBox
+{
+    display: grid;
+    grid-template-columns:2fr 9fr;
+    width: 100%;
+    margin: 5px 0 0 0;
+    background: var(--fw);
+}
+.chatBox:hover
+{
+    background: var(--white);
+}
+.chat_dp
+{
+    text-align: center;
+}
+.image_dp
+{
+    height:75px;
+    width:65px;
+    margin: auto;
+    padding: 5px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.bi-person-circle
+{
+    padding:10px;
+    font-size: 3.5rem;
+    color:var(--gray);
+}
+.chat_detail
+{
+    border-bottom: 1px solid var(--lgray);
+}
+.chat_detail > div
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.short_message
+{
+    /* padding: 10px 0; */
+    color:var(--gary);
+}
+.notice
+{
+    border-radius: 50px;
+    color:var(--light);
+    padding: 5px 10px;
+    background: var(--green);
+}
+.person_name
+{
+    margin: 10px 0;
+    font-weight: bold;
 }
 /*
-    FOOTER --------
+    MESSAGES ------
 */
-#typeing_pad
+#messages
+{
+    width: 100%;
+    height: 84vh;
+    background:var(--face);
+    overflow-y: scroll;
+}
+.date
+{
+    display: block;
+    width: 100px;
+    margin:1rem auto;
+    padding: 5px;
+    color:var(--gray);
+    background: var(--light);
+    border-radius: 5px;
+}
+.left
+{
+    width: 70vw;
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    background: var(--light);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10px 100%, 10px 10px);
+    border-radius: 0 10px 10px 10px;
+}
+time
+{
+    display: block;
+    padding-top: 5px;
+    text-align: right;
+    color:var(--gray);
+}
+.right
+{
+    width: 70vw;
+    margin: 1rem 0;
+    margin-left: auto;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    background: var(--lgreen);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 10px, calc(100% - 10px) 100%, 0 100%);
+    border-radius: 10px 0 10px 10px;
+}
+:is(.left, .right) > a
+{
+    display: block;
+    color:green;
+}
+/*
+    MESSAGE BUTTON -------
+*/
+#msg_btn
+{
+    position: absolute;
+    bottom:5vh;
+    right:5vw;
+    padding: 10px 15px;
+    background: var(--green);
+    border-radius: 50%;
+}
+#msg_btn .bi
+{
+    font-size: 1.5rem;
+    color:var(--light);
+}
+/*
+    TYPEPAD --------
+*/
+#type_pad
 {
     display:flex;
     align-items: center;
@@ -123,14 +342,15 @@ header div
     height: 8vh;
     width: 100%;
     padding: 5px;
-    background: var(--lgreen);
+    background: var(--face);
 }
 #input_form
 {
     display: flex;
     align-items: center;
-    height: 99%;
-    width: 100%;
+    height: 95%;
+    width: 90%;
+    margin: 0.5rem;
     padding: 0 10px;
     background: var(--light);
     border-radius: 20px;
@@ -147,8 +367,14 @@ header div
 {
     padding: 0 2px;
     width: 35px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     border-radius: 50%;
+}
+.bi-ruppes
+{
+    margin: 0 0.5rem;
+    background: var(--lgray);
+    border-radius:50% ;
 }
 #mic
 {
@@ -159,6 +385,7 @@ header div
     display: inline-block;
     padding: 5px 10px;
     font-size: 2rem;
+    color:var(--light);
     background: var(--green);
     border-radius: 50%;
 }
