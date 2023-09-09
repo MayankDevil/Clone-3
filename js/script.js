@@ -6,99 +6,94 @@
 */
 try
 {
-    // let primary_container = document.getElementById('primary_container')
+    let header = document.getElementById('header')
 
-    // let secondary_container = document.getElementById('secondary_container')
+    let footer = document.getElementById('footer')
     
+    header.innerHTML = primary_Header_Layout()
+
+    footer.innerHTML = contentLayout()
+
     let chats = document.getElementById('chats')
 
     let chatBox = document.getElementsByClassName('chatBox')
-
-    var index = Math.floor(Math.random() * chatData.length)
-
-    chat_Section()
-
+    
     /*
-        ----------------------------------------------------------------------------------------
-        [ chat box layout ] get chat data argument and return layout
-        ----------------------------------------------------------------------------------------
+        -----------------------------------------------------------------------------------------
+        | message section function | return message in section by take index number in argument
+        -----------------------------------------------------------------------------------------
     */ 
-    function chat_Box_Layout(data)
+    function message_Section(index)
     {
-        if (data.person_dp == null)
+        let messages = document.getElementById('messages')
+
+        let person_name = document.getElementById('person_name')
+
+        let person_dp = document.getElementById('person_dp')
+
+        messages.innerHTML = "" // clear message section
+
+        person_name.innerHTML = `${chatData[index].person_name}` // set name of person
+        
+        /*
+            [ set person dp  if not null ]-------------------------------------------------------  
+        */
+
+        if (chatData[index].person_dp != null)
         {
-            return (`
-                <div class="chatBox">
-
-                    <div class="chat_dp">
-                        <span class="bi bi-person-circle"></span>
-                    </div>
-                    
-                    <div class="chat_detail">
-                        <div>
-                            <div class="person_name"> ${data.person_name} </div>
-                            <time> ${data.chat[data.chat.length - 1].time} </time>
-                        </div>
-                        <div>
-                            <div class="short_message"> ${data.chat[0].data} </div>
-                            <div class="notice"> 1 </div>
-                        </div>
-                    </div>
-
-                </div>
-            `)
+            person_dp.innerHTML = `<img src='${chatData[index].person_dp}' class='image_dp'>`
         }
         else
         {
-            return (`
-                <div class="chatBox">
-
-                    <div class="chat_dp">
-                        <img src='${data.person_dp }' class='image_dp'>
-                    </div>
-                    
-                    <div class="chat_detail">
-                        <div>
-                            <div class="person_name"> ${data.person_name} </div>
-                            <time> ${data.chat[data.chat.length - 1].time} </time>
-                        </div>
-                        <div>
-                            <div class="short_message"> ${data.chat[0].data} </div>
-                        </div>
-                    </div>
-
-                </div>
-            `)
+            person_dp.innerHTML = `<span class="bi bi-person-circle"></span>`
         }
-    }
-    /*
-        -----------------------------------------------------------------------------------------
-        | chat section function | return numbers of chats that present in chatData
-        -----------------------------------------------------------------------------------------
-    */ 
-    function chat_Section()
-    {
-        chats.innerHTML = "" // clear chat section
+
+        messages.insertAdjacentHTML("beforeend",`<span class='date'> ${chatData[index].date} </span>`)
 
         /*
             [ return as loop until to chat length ]----------------------------------------------
         */ 
-        for (let i = 0; i < chatData.length; i++)
+        for (let i = 0; i < chatData[index].chat.length; i++)
         {
-            chats.insertAdjacentHTML("beforeend",`${ chat_Box_Layout(chatData[i]) }`)
-            // chats.insertAdjacentHTML("beforeend",`${ chat_Box_Layout(chatData[i]) }`)
+            if (chatData[index].chat[i].read == 1)
+            {
+                messages.insertAdjacentHTML("beforeend",`<div class='left'>${chatData[index].chat[i].data} <time> ${chatData[index].chat[i].time} </time> <d/iv>`)
+            }
+            else
+            {
+                messages.insertAdjacentHTML("beforeend",`<div class='right'>${chatData[index].chat[i].data} <time> ${chatData[index].chat[i].time} </time> <d/iv>`)
+            }    
         }
     }
-
-    for (let i = 0; i < chatBox.length; i++)
+     /*
+        -----------------------------------------------------------------------------------------
+        | chat section function | return numbers of chats that present in chatData
+        -----------------------------------------------------------------------------------------
+    */ 
+        function chat_Section()
+        {
+            
+        }
+        chat_Section()
+    chats.innerHTML = "" // clear chat section
+    /*
+        [ return as loop until to chat length ]----------------------------------------------
+    */ 
+    for (let i = 0; i < chatData.length; i++)
     {
-        
+        chats.insertAdjacentHTML("beforeend",`${ chat_Box_Layout(chatData[i]) }`)
+
         chatBox[i].onclick = () => {
 
-            index = i
-            window.open('second.html','_parent','width=150,height=100'.false)
+            header.innerHTML = secondary_Header_Layout()
+
+            footer.innerHTML = message_Layout()
+            
+            message_Section(i)
+
         }    
     }
+    about()
 }
 catch(error)
 {

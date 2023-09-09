@@ -57,7 +57,11 @@ body
     scroll-behavior: smooth;
     overflow: hidden;
 }
-#primary_container
+#mother_container
+{
+    postion:relative;
+}
+.primary_container
 {
     height: 100%;
     max-width: 500px;
@@ -65,16 +69,15 @@ body
     position: relative;
     overflow-y: auto;
 }
-#secondary_container
-{
+.secondary_container
+{ 
     width: 100%;
     min-height: 100vh;
 }
 /*
     HEADER -----
 */
-#primary_header div,
-#second_header div
+#header
 {
     display: flex;
     align-items: center;
@@ -89,6 +92,7 @@ body
 {
     position: sticky;
     top:0;
+    z-index:5;
     display: grid;
     grid-template-columns: 10% 90%;
     height: 8vh;
@@ -137,6 +141,10 @@ body
     font-size: 1.5rem;
     color:var(--light);
 }
+#tools a
+{
+    display:inline-block;
+}
 #tools .bi
 {   
     padding: 10px;
@@ -152,9 +160,46 @@ body
 {
     font-size: 1.4rem;
 }
+#dot_menu
+{
+    background:transparent;
+}
+/*
+    FLOAT MENU ----------
+*/
+#flt_menu
+{
+    position:absolute;
+    z-index:10;
+    top:1vh;
+    right:1vw;
+    display:none;
+    height:auto;
+    background:var(--light);
+    border-radius:5px;
+    box-shadow:5px 5px 10px var(--lgray);
+}
+.link
+{
+    display:block;
+    padding:1rem;
+    padding-right:3rem;
+    text-decoration:none;
+    color:var(--gray);
+}
+.link:hover
+{
+    background:var(--fw);
+}
 /*
     PERSON -------
 */
+#person
+{
+    display: flex;
+    grid-gap:5px;
+    align-items: center;
+}
 #person_dp > .bi-person-circle
 {
     padding: 1rem;
@@ -181,6 +226,7 @@ body
 {
     display: flex;
     grid-gap:1rem;
+    align-items: center;
     padding: 0 1rem;
     height: 100%;
 }
@@ -285,7 +331,7 @@ body
 }
 .left
 {
-    width: 70vw;
+    width: 70%;
     margin: 1rem 0.5rem;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     background: var(--light);
@@ -301,7 +347,7 @@ time
 }
 .right
 {
-    width: 70vw;
+    width: 70%;
     margin: 1rem 0;
     margin-left: auto;
     padding: 0.5rem 2rem 0.5rem 0.5rem;
@@ -322,7 +368,8 @@ time
     position: absolute;
     bottom:5vh;
     right:5vw;
-    padding: 10px 15px;
+    padding: 15px;
+    padding-top: 19px;
     background: var(--green);
     border-radius: 50%;
 }

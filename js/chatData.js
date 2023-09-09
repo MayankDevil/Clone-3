@@ -8,7 +8,7 @@ try
 {
     var chatData = [
         {
-            person_name : "Dr.Angela",
+            person_name : "Angela Gabrielle",
             person_dp : "data/person/angelaWhite.jpeg",
             date : "14/08/2023",
             chat : [
@@ -23,29 +23,84 @@ try
                     read : 0
                 },
                 {
-                    data : "Dr.Angela Gabrielle White",
-                    time : "1:36am",
+                    data : "Angela Gabrielle White",
+                    time : "1:33am",
                     read : 1
                 },
                 {
-                    data : "What i can do for you?",
+                    data : "I can't believe you are <br> really...",
+                    time : "1:34am",
+                    read : 0
+                },
+                {
+                    data : "I am feel glad",
+                    time : "1:35am",
+                    read : 1
+                },
+                {
+                    data : "and i am nervous",
                     time : "1:36am",
                     read : 0
                 },
                 {
-                    data : "Actually i want you to update my website design.",
-                    time : "1:36am",
+                    data : "So Mis how can you like to take",
+                    time : "1:37am",
+                    read : 0
+                },
+                {
+                    data : "What?",
+                    time : "1:38am",
                     read : 1
                 },
                 {
-                    data : "https://www.angelawhitestore.com/home",
-                    time : "1:36am",
+                    data : "take my help.",
+                    time : "1:38am",
+                    read : 0
+                },
+                {
+                    data : "I have a website.",
+                    time : "1:39am",
                     read : 1
-                }
+                },
+                {
+                    data : "Every Once know that",
+                    time : "1:41am",
+                    read : 0
+                },
+                {
+                    data : "but i want that you will be to upgrade it",
+                    time : "1:42am",
+                    read : 1
+                },
+                {
+                    data : "first of all give me",
+                    time : "1:43am",
+                    read : 0
+                },
+                {
+                    data : "i will give every thing but please update it",
+                    time : "1:44am",
+                    read : 1
+                },
+                {
+                    data : "can it is opportunity for me.",
+                    time : "1:45am",
+                    read : 0
+                },
+                {
+                    data : "by the way. I saied about website access.<br> domain Address <br> host Address",
+                    time : "1:46am",
+                    read : 0
+                },
+                {
+                    data : "I give you more than access but first done it.",
+                    time : "1:40am",
+                    read : 1
+                },
             ]
         },
         {
-            person_name : "MarkZuckerberg",
+            person_name : "Mark Zuckerberg",
             person_dp : "data/person/markZuckerberg.jpg",
             date : "12/08/2023",
             chat : [
@@ -157,7 +212,7 @@ try
             ]
         },
         {
-            person_name : "NarendraModi",
+            person_name : "Narendra Modi",
             person_dp : "data/person/narendraModi.png",
             date : "15/08/2023",
             chat : [
@@ -252,7 +307,7 @@ try
                     read : 1
                 },
                 {
-                    data : "Mayank Beta app whatsapp ki jagha lene wali application ka nirmad kare. Or ha Gaurav, Prince, Vinit ko nirmadkary me sath mat bhulna",
+                    data : "Mayank Beta app whatsapp ki jagha koior application ka nirmand kare. Or ha Gaurav, Prince, Vinit ko nirmandkary me sath mat bhulna",
                     time : "10:52am",
                     read : 1
                 },
@@ -274,7 +329,7 @@ try
             ]
         },
         {
-            person_name : "BillGates",
+            person_name : "Bill Gates",
             person_dp : "data/person/billGates.jpeg",
             date : "01/09/2023",
             chat : [
@@ -289,7 +344,7 @@ try
                     read : 0
                 },
                 {
-                    data : "Good Morning Mayank. <br> Actually i need you advice.",
+                    data : "Good Morning Mayank. <br> Actually i need your advice.",
                     time : "9:03am",
                     read : 1
                 },
@@ -314,7 +369,7 @@ try
                     read : 0
                 },
                 {
-                    data : "Thanks Its Great.",
+                    data : "Thanks, Its Great.",
                     time : "9:08am",
                     read : 1
                 }
@@ -338,6 +393,172 @@ try
                 {
                     data : "Alexa",
                     time : "10:32pm",
+                    read : 1
+                }
+            ]
+        },
+        {
+            person_name : "Sundar Pichai",
+            person_dp : "data/person/sundarPichai.jpeg",
+            date : "17/08/2023",
+            chat : [
+                {
+                    data : "Mayank",
+                    time : "5:30pm",
+                    read : 1
+                },
+                {
+                    data : "I can hear that whatsapp will be baned in india.",
+                    time : "5:30pm",
+                    read : 1
+                },
+                {
+                    data : "Who one say that.",
+                    time : "5:32pm",
+                    read : 0
+                },
+                {
+                    data : "Modi ji.",
+                    time : "5:33pm",
+                    read : 1
+                },
+                {
+                    data : "You mean Narendra Modi",
+                    time : "5:34pm",
+                    read : 0
+                },
+                {
+                    data : "Yes it will be true, Have any strategic view about this",
+                    time : "5:36pm",
+                    read : 0
+                },
+                {
+                    data : "may be, not sure.",
+                    time : "5:38pm",
+                    read : 1
+                },
+                {
+                    data : "And Which Year you will be GRADUATE",
+                    time : "5:40pm",
+                    read : 1
+                },
+                {
+                    data : "Some months left",
+                    time : "5:41pm",
+                    read : 0
+                },
+                {
+                    data : "Don't Forget! I have post for you in Google",
+                    time : "5:42pm",
+                    read : 1
+                },
+                {
+                    data : "I Never forget. Sir",
+                    time : "5:43pm",
+                    read : 0
+                }
+            ]
+        },
+        {
+            person_name : "Steve Jobs",
+            person_dp : "data/person/steveJobs.jpeg",
+            date : "30/08/2023",
+            chat : [
+                {
+                    data : "without waste time",
+                    time : "1:30am",
+                    read : 1
+                },
+                {
+                    data : "my point is i want to collaboration with you in new project against whatsapp",
+                    time : "1:36am",
+                    read : 1
+                },
+                {
+                    data : "Soryy Mr.Jobs but we are already collaborat with Gaurav, Prince, Vinit.",
+                    time : "1:36am",
+                    read : 0
+                },
+                {
+                    data : "what you say vinit but he is unuseable nontechniqual fool",
+                    time : "1:36am",
+                    read : 1
+                },
+                {
+                    data : "Yes, Your right even he is more useless stupied rascal <br> but it my final decision",
+                    time : "1:36am",
+                    read : 0
+                },
+                {
+                    data : "Sorry Don't Mind Sir",
+                    time : "1:36am",
+                    read : 0
+                },
+                {
+                    data : "It Ok, I hope once day we will work together",
+                    time : "1:36am",
+                    read : 0
+                }
+            ]
+        },
+        {
+            person_name : "Scarlit Scandal",
+            person_dp : "data/person/scarlitScandal.jpeg",
+            date : "07/09/2023",
+            chat : [
+                {
+                    data : "Hello! Mam",
+                    time : "12:03pm",
+                    read : 0
+                },
+                {
+                    data : "Can I know You?",
+                    time : "12:09pm",
+                    read : 1
+                },
+                {
+                    data : "No, But i know you.",
+                    time : "12:10pm",
+                    read : 0
+                },
+                {
+                    data : "so",
+                    time : "1:11am",
+                    read : 1
+                },
+                {
+                    data : "I am like you so much.",
+                    time : "1:12am",
+                    read : 0
+                },
+                {
+                    data : "Are you fltting?",
+                    time : "1:13am",
+                    read : 1
+                },
+                {
+                    data : "No beautiful, I am just ask for a coffee together",
+                    time : "1:14am",
+                    read : 0
+                },
+                {
+                    data : "how can you sure that i am ready to go?",
+                    time : "1:15am",
+                    read : 1
+                },
+                {
+                    data : "I explain that at coffee?",
+                    time : "1:15am",
+                    read : 0
+                },
+                {
+                    data : "your time my place",
+                    time : "1:15am",
+                    read : 0
+                },
+                {
+                    data : "Ok than i am free i will message you",
+                    time : "1:15am",
                     read : 1
                 }
             ]

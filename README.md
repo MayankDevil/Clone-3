@@ -14,7 +14,7 @@
 
 - TecStack : { HTML | CSS | JavaScript }
 
-- Thanks : { VSCode | GitHub | Whatsapp }
+- Thanks : { VSCode | GitHub | Whatsapp | Bootstrap-Icons }
 
 - Work : Self
 
@@ -40,6 +40,6 @@
 
 _this repository is the clone of **Whatsapp**. I am just try to copy and develope to make better version as my imagination because i am developer_
 
-## Message
+## Responsive
 
-_this is whatsapp mobile for mobile_
+_Yes it responsive but this clone create for whatsapp mobile only it not "whatsapp web"_

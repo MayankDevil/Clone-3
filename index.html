@@ -3,7 +3,7 @@
 -	Clone-3 "Whatsapp"
 -	Developed by Mayank
 -	CopyRight by Whatsapp
--	HTML : ./login.html
+-	HTML : ./index.html
 -->
 <html lang="en">
 
@@ -26,79 +26,27 @@
 <body class="">
 
 	<!--
-		------------------------------------------------
-		| primary container | 
-		------------------------------------------------
+		--------------------
+		| mother container |============================================
+		-------------------- 
+		- superime conatiner that containe all ui
+		- after body it parent div all
+		- un uncombin script inside body
 	-->
-	<main class="" id="primary_container">
+	<main class="primary_container" id="mother_container">
+
 		<!--
-			-------------------------
-			[ second header section ]------------------------------------
-			-------------------------
+			====================
+			|[ header section ]|------------------------------------
+			====================
 		-->
-		<header class="" id="primary_header">
-			<div class="flex justify-between">
-
-				<!-- ( brand name ) -->
-				<div class="" id="brand_name"> Whatsapp </div>
-				
-				<!-- ( tools ) -->
-				<div class="" id="tools">
-					
-					<a href="#" class="tool">
-						<span class="bi bi-camera-fill"></span>
-					</a>
-					<a href="#" class="tool">
-						<span class="bi bi-search"></span>
-					</a>
-					<a href="#" class="tool">
-						<span class="bi bi-three-dots-vertical"></span>
-					</a>
-
-				</div>
-
-			</div>
-			
-		</header>
-
-		<div>
-		
-			<!-- navbar -->
-			<nav id="navbar">
-				
-				<span class="bi bi-people-fill" id="group_icon"></span>
-				
-				<div id="nav">
-					<a href="#" class="active"> CHATS </a>
-					<a href="#status"> STATUS </a>
-					<a href="#call"> CALLS </a>
-				</div>
-				
-			</nav>
-			<!--
-				----------------
-				[ chat section ]------------------------------------
-				----------------
-			-->
-			<section id="chats">
-				<!--
-					- include js/chatData.js
-					- use array of object
-					- 
-				-->
-				
-			</section>
-			<!--
-				==================
-				[ message button ]------------------------------------
-				==================
-			-->
-			<div id="msg_btn">
-				<span class="bi bi-chat-right-text-fill"></span>
-			</div>
-			
-			<!-- <span class="bi bi-collection"></span> -->
-		</div>
+		<header class="primary_header" id="header"></header>
+		<!--
+			====================
+			|[ footer section ]|------------------------------------
+			====================
+		-->
+		<footer class="" id="footer"></footer>
 		
 	</main>
 	<!--
@@ -107,6 +55,12 @@
 		----------
 	-->
 	<script src="js/chatData.js"></script>
+	<script src="js/primaryHeaderLayout.js"></script>
+	<script src="js/secondaryHeaderLayout.js"></script>
+	<script src="js/contentLayout.js"></script>
+	<script src="js/chatBoxLayout.js"></script>
+	<script src="js/messageLayout.js"></script>
+	<script src="js/about.js"></script>
 	<script src="js/script.js"></script>
 
 </body>
